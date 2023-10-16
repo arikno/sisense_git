@@ -55,7 +55,7 @@
         "type": "onUpdate",
         "tzName": "Asia/Jerusalem"
     },
-    "title": "Frame SDK Demo",
+    "title": "Frame SDK Demo 1",
     "widgets": [
         "./widgets/5d371c2f98b98a113c6a5f3b/widget.json",
         "./widgets/5d431031feb5d72170a608a9/widget.json",
