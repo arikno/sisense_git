@@ -1,35 +1,7 @@
 {
     "defaultFilters": [
         {
-            "instanceid": "AF743-ECF7-79",
-            "isCascading": false,
-            "jaql": {
-                "collapsed": true,
-                "column": "Gender",
-                "datasource": {
-                    "address": "LocalHost",
-                    "database": "aSampleIAAaECommerce",
-                    "fullname": "LocalHost/Sample ECommerce",
-                    "id": "aLOCALHOST_aSAMPLEIAAaECOMMERCE",
-                    "lastBuildTime": "2018-07-31T15:11:12",
-                    "title": "Sample ECommerce"
-                },
-                "datatype": "text",
-                "dim": "[Commerce.Gender]",
-                "filter": {
-                    "explicit": true,
-                    "members": [
-                        "Male"
-                    ],
-                    "multiSelection": true
-                },
-                "isDashboardFilter": true,
-                "table": "Commerce",
-                "title": "Gender"
-            }
-        },
-        {
-            "instanceid": "B8FF0-5151-29",
+            "instanceid": "EE8C9-68CE-55",
             "isCascading": false,
             "jaql": {
                 "collapsed": true,
