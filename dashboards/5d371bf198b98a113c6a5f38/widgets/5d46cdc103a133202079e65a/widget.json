@@ -1,5 +1,5 @@
 {
-    "_dataSourcePermission": "edit",
+    "_dataSourcePermission": "owner",
     "_toDisableOptionsList": {
         "widgets": {
             "duplicate": false
