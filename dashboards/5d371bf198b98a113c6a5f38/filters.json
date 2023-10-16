@@ -52,6 +52,31 @@
                 "table": "Brand",
                 "title": "Brand"
             }
+        },
+        {
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Category",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aSampleIAAaECommerce",
+                    "fullname": "LocalHost/Sample ECommerce",
+                    "id": "aLOCALHOST_aSAMPLEIAAaECOMMERCE",
+                    "title": "Sample ECommerce"
+                },
+                "datatype": "text",
+                "dim": "[Category.Category]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "isDashboardFilter": true,
+                "merged": true,
+                "table": "Category",
+                "title": "Category"
+            }
         }
     ]
 }
