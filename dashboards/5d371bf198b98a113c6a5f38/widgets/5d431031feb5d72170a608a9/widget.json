@@ -1,0 +1,148 @@
+{
+    "_dataSourcePermission": "owner",
+    "_toDisableOptionsList": {
+        "widgets": {
+            "duplicate": false
+        }
+    },
+    "dashboardid": "5d371bf198b98a113c6a5f38",
+    "datasource": {
+        "address": "LocalHost",
+        "database": "aSampleIAAaECommerce",
+        "fullname": "LocalHost/Sample ECommerce",
+        "id": "aLOCALHOST_aSAMPLEIAAaECOMMERCE",
+        "lastBuildTime": "2018-07-31T15:11:12",
+        "title": "Sample ECommerce"
+    },
+    "desc": null,
+    "metadata": {
+        "ignore": {
+            "all": false,
+            "dimensions": [
+            ],
+            "ids": [
+            ]
+        },
+        "panels": [
+            {
+                "items": [
+                    {
+                        "format": {
+                            "mask": {
+                                "days": "shortDate",
+                                "isdefault": true,
+                                "minutes": "HH:mm",
+                                "months": "MM/yyyy",
+                                "quarters": "yyyy Q",
+                                "weeks": "ww yyyy",
+                                "years": "yyyy"
+                            }
+                        },
+                        "hierarchies": [
+                            "calendar",
+                            "calendar - weeks"
+                        ],
+                        "jaql": {
+                            "column": "Date",
+                            "datatype": "datetime",
+                            "dim": "[Commerce.Date (Calendar)]",
+                            "level": "days",
+                            "merged": true,
+                            "table": "Commerce",
+                            "title": "Days in Date"
+                        }
+                    }
+                ],
+                "name": "date"
+            },
+            {
+                "items": [
+                    {
+                        "field": {
+                            "id": "[Commerce.Revenue]_sum",
+                            "index": 1
+                        },
+                        "format": {
+                            "color": {
+                                "max": "#00a5b8",
+                                "min": "#0de6ff",
+                                "rangeMode": "both",
+                                "steps": 9,
+                                "type": "range"
+                            },
+                            "mask": {
+                                "abbreviations": {
+                                    "b": true,
+                                    "k": true,
+                                    "m": true,
+                                    "t": true
+                                },
+                                "decimals": "auto",
+                                "isdefault": true,
+                                "separated": true,
+                                "type": "number"
+                            }
+                        },
+                        "jaql": {
+                            "agg": "sum",
+                            "column": "Revenue",
+                            "datatype": "numeric",
+                            "dim": "[Commerce.Revenue]",
+                            "table": "Commerce",
+                            "title": "Total Revenue"
+                        }
+                    }
+                ],
+                "name": "color"
+            },
+            {
+                "items": [
+                ],
+                "name": "filters"
+            }
+        ]
+    },
+    "oid": "5d431031feb5d72170a608a9",
+    "options": {
+        "autoUpdateOnEveryChange": true,
+        "dashboardFiltersMode": "filter",
+        "disallowSelector": false,
+        "selector": true,
+        "supportsHierarchies": false,
+        "triggersDomready": true
+    },
+    "style": {
+        "dayNameEnabled": true,
+        "dayNumberEnabled": true,
+        "domain/half-year": false,
+        "domain/month": false,
+        "domain/quarter": true,
+        "domain/year": false,
+        "grayoutEnabled": false,
+        "narration": {
+            "aggregation": "sum",
+            "display": "above",
+            "enabled": false,
+            "format": "bullets",
+            "labels": [
+                {
+                    "id": "days",
+                    "plural": "days",
+                    "singular": "days",
+                    "title": "days"
+                }
+            ],
+            "up_sentiment": "good",
+            "verbosity": "medium"
+        },
+        "orient/horizontal": true,
+        "orient/vertical": false,
+        "view/monthly": true,
+        "view/weekly": false,
+        "week/monday": false,
+        "week/sunday": true
+    },
+    "subtype": "heatmap",
+    "title": "",
+    "type": "heatmap"
+}

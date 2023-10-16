@@ -1,0 +1,186 @@
+{
+    "_dataSourcePermission": "owner",
+    "_toDisableOptionsList": {
+        "widgets": {
+            "duplicate": false
+        }
+    },
+    "dashboardid": "5d371bf198b98a113c6a5f38",
+    "datasource": {
+        "address": "LocalHost",
+        "database": "aSampleIAAaECommerce",
+        "fullname": "LocalHost/Sample ECommerce",
+        "id": "aLOCALHOST_aSAMPLEIAAaECOMMERCE",
+        "title": "Sample ECommerce"
+    },
+    "desc": null,
+    "metadata": {
+        "ignore": {
+            "all": false,
+            "dimensions": [
+            ],
+            "ids": [
+            ]
+        },
+        "panels": [
+            {
+                "items": [
+                    {
+                        "format": {
+                            "color": {
+                                "color": "#00cee6",
+                                "type": "color"
+                            },
+                            "mask": {
+                                "abbreviations": {
+                                    "b": true,
+                                    "k": false,
+                                    "m": true,
+                                    "t": true
+                                },
+                                "decimals": "auto",
+                                "isdefault": true,
+                                "separated": true,
+                                "type": "number"
+                            }
+                        },
+                        "jaql": {
+                            "agg": "sum",
+                            "column": "Revenue",
+                            "datatype": "numeric",
+                            "dim": "[Commerce.Revenue]",
+                            "table": "Commerce",
+                            "title": "Total Revenue"
+                        }
+                    }
+                ],
+                "name": "value"
+            },
+            {
+                "items": [
+                    {
+                        "format": {
+                            "mask": {
+                                "abbreviations": {
+                                    "b": true,
+                                    "k": false,
+                                    "m": true,
+                                    "t": true
+                                },
+                                "decimals": "auto",
+                                "isdefault": true,
+                                "separated": true,
+                                "type": "number"
+                            }
+                        },
+                        "jaql": {
+                            "agg": "count",
+                            "column": "Country",
+                            "datatype": "text",
+                            "dim": "[Country.Country]",
+                            "merged": true,
+                            "table": "Country",
+                            "title": "# of unique Country"
+                        }
+                    }
+                ],
+                "name": "secondary"
+            },
+            {
+                "items": [
+                ],
+                "name": "min"
+            },
+            {
+                "items": [
+                ],
+                "name": "max"
+            },
+            {
+                "items": [
+                ],
+                "name": "filters"
+            }
+        ]
+    },
+    "oid": "5d46cdc103a133202079e65a",
+    "options": {
+        "autoUpdateOnEveryChange": true,
+        "dashboardFiltersMode": "select",
+        "disallowSelector": true,
+        "selector": false,
+        "supportsHierarchies": false,
+        "triggersDomready": true
+    },
+    "style": {
+        "components": {
+            "icon": {
+                "enabled": true,
+                "inactive": true
+            },
+            "secondaryTitle": {
+                "enabled": true,
+                "inactive": false
+            },
+            "title": {
+                "enabled": true,
+                "inactive": false
+            }
+        },
+        "indicator/gauge": {
+            "components": {
+                "labels": {
+                    "enabled": true,
+                    "inactive": false
+                },
+                "secondaryTitle": {
+                    "enabled": true,
+                    "inactive": true
+                },
+                "ticks": {
+                    "enabled": true,
+                    "inactive": false
+                },
+                "title": {
+                    "enabled": true,
+                    "inactive": false
+                }
+            },
+            "skin": "1",
+            "subtype": "round"
+        },
+        "indicator/numeric": {
+            "components": {
+                "icon": {
+                    "enabled": true,
+                    "inactive": false
+                },
+                "secondaryTitle": {
+                    "enabled": true,
+                    "inactive": true
+                },
+                "title": {
+                    "enabled": true,
+                    "inactive": false
+                }
+            },
+            "skin": "vertical",
+            "subtype": "simple"
+        },
+        "narration": {
+            "aggregation": "sum",
+            "display": "above",
+            "enabled": false,
+            "format": "bullets",
+            "labels": [
+            ],
+            "up_sentiment": "good",
+            "verbosity": "medium"
+        },
+        "skin": "vertical",
+        "subtype": "simple"
+    },
+    "subtype": "indicator/numeric",
+    "title": "",
+    "type": "indicator"
+}

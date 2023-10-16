@@ -1,0 +1,223 @@
+{
+    "_dataSourcePermission": "owner",
+    "_toDisableOptionsList": {
+        "widgets": {
+            "duplicate": false
+        }
+    },
+    "dashboardid": "5d371bf198b98a113c6a5f38",
+    "datasource": {
+        "address": "LocalHost",
+        "database": "aSampleIAAaECommerce",
+        "fullname": "LocalHost/Sample ECommerce",
+        "id": "aLOCALHOST_aSAMPLEIAAaECOMMERCE",
+        "lastBuildTime": "2018-07-31T15:11:12",
+        "title": "Sample ECommerce"
+    },
+    "desc": null,
+    "metadata": {
+        "ignore": {
+            "all": false,
+            "dimensions": [
+            ],
+            "ids": [
+            ]
+        },
+        "panels": [
+            {
+                "items": [
+                    {
+                        "format": {
+                            "mask": {
+                                "days": "shortDate",
+                                "isdefault": true,
+                                "minutes": "HH:mm",
+                                "months": "MM/yyyy",
+                                "quarters": "yyyy Q",
+                                "weeks": "ww yyyy",
+                                "years": "yyyy"
+                            }
+                        },
+                        "hierarchies": [
+                            "calendar",
+                            "calendar - weeks"
+                        ],
+                        "jaql": {
+                            "column": "Date",
+                            "datatype": "datetime",
+                            "dim": "[Commerce.Date (Calendar)]",
+                            "firstday": "mon",
+                            "level": "weeks",
+                            "merged": true,
+                            "table": "Commerce",
+                            "title": "Weeks in Date"
+                        }
+                    }
+                ],
+                "name": "x-axis"
+            },
+            {
+                "items": [
+                    {
+                        "field": {
+                            "id": "[Commerce.Revenue]_sum",
+                            "index": 1
+                        },
+                        "format": {
+                            "color": {
+                                "color": "#00cee6",
+                                "type": "color"
+                            },
+                            "mask": {
+                                "abbreviations": {
+                                    "b": true,
+                                    "k": true,
+                                    "m": true,
+                                    "t": true
+                                },
+                                "decimals": "auto",
+                                "isdefault": true,
+                                "separated": true,
+                                "type": "number"
+                            }
+                        },
+                        "jaql": {
+                            "agg": "sum",
+                            "column": "Revenue",
+                            "datatype": "numeric",
+                            "dim": "[Commerce.Revenue]",
+                            "table": "Commerce",
+                            "title": "Total Revenue"
+                        }
+                    }
+                ],
+                "name": "values"
+            },
+            {
+                "items": [
+                ],
+                "name": "break by"
+            },
+            {
+                "items": [
+                ],
+                "name": "filters"
+            }
+        ]
+    },
+    "oid": "5d46cde503a133202079e65c",
+    "options": {
+        "autoUpdateOnEveryChange": true,
+        "dashboardFiltersMode": "filter",
+        "drillToAnywhere": true,
+        "previousScrollerLocation": {
+            "max": null,
+            "min": null
+        },
+        "selector": true,
+        "triggersDomready": true
+    },
+    "style": {
+        "dataLimits": {
+            "categoriesCapacity": 100000,
+            "seriesCapacity": 50
+        },
+        "legend": {
+            "enabled": true,
+            "position": "bottom"
+        },
+        "lineWidth": {
+            "width": "bold"
+        },
+        "markers": {
+            "enabled": false,
+            "fill": "filled",
+            "size": "small"
+        },
+        "narration": {
+            "aggregation": "sum",
+            "display": "above",
+            "enabled": false,
+            "format": "bullets",
+            "labels": [
+                {
+                    "id": "days",
+                    "plural": "days",
+                    "singular": "days",
+                    "title": "days"
+                }
+            ],
+            "up_sentiment": "good",
+            "verbosity": "medium"
+        },
+        "navigator": {
+            "enabled": true
+        },
+        "seriesLabels": {
+            "enabled": false,
+            "labels": {
+                "enabled": false,
+                "stacked": false,
+                "stackedPercentage": false,
+                "types": {
+                    "count": false,
+                    "percentage": false,
+                    "relative": false,
+                    "totals": false
+                }
+            },
+            "rotation": 0
+        },
+        "xAxis": {
+            "enabled": true,
+            "gridLines": true,
+            "isIntervalEnabled": false,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "ticks": true,
+            "title": {
+                "enabled": false
+            },
+            "x2Title": {
+                "enabled": false
+            }
+        },
+        "y2Axis": {
+            "enabled": true,
+            "gridLines": false,
+            "hideMinMax": false,
+            "inactive": true,
+            "isIntervalEnabled": true,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "logarithmic": false,
+            "ticks": true,
+            "title": {
+                "enabled": false
+            }
+        },
+        "yAxis": {
+            "enabled": true,
+            "gridLines": true,
+            "hideMinMax": false,
+            "inactive": false,
+            "isIntervalEnabled": true,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "logarithmic": false,
+            "ticks": true,
+            "title": {
+                "enabled": false
+            }
+        }
+    },
+    "subtype": "line/basic",
+    "title": "",
+    "type": "chart/line"
+}

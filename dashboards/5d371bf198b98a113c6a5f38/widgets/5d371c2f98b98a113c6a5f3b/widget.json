@@ -1,0 +1,155 @@
+{
+    "_dataSourcePermission": "owner",
+    "_toDisableOptionsList": {
+        "widgets": {
+            "duplicate": false
+        }
+    },
+    "dashboardid": "5d371bf198b98a113c6a5f38",
+    "datasource": {
+        "address": "LocalHost",
+        "database": "aSampleIAAaECommerce",
+        "fullname": "LocalHost/Sample ECommerce",
+        "id": "aLOCALHOST_aSAMPLEIAAaECOMMERCE",
+        "lastBuildTime": "2018-07-31T15:11:12",
+        "title": "Sample ECommerce"
+    },
+    "desc": null,
+    "metadata": {
+        "ignore": {
+            "all": false,
+            "dimensions": [
+            ],
+            "ids": [
+            ]
+        },
+        "panels": [
+            {
+                "items": [
+                    {
+                        "field": {
+                            "id": "[Commerce.Gender]",
+                            "index": 0
+                        },
+                        "format": {
+                            "members": {
+                                "Female": {
+                                    "color": "#00cee6",
+                                    "sortData": "Female",
+                                    "title": "Female"
+                                },
+                                "Male": {
+                                    "color": "#9b9bd7",
+                                    "sortData": "Male",
+                                    "title": "Male"
+                                },
+                                "Unspecified": {
+                                    "color": "#6EDA55",
+                                    "sortData": "Unspecified",
+                                    "title": "Unspecified"
+                                }
+                            }
+                        },
+                        "jaql": {
+                            "column": "Gender",
+                            "datatype": "text",
+                            "dim": "[Commerce.Gender]",
+                            "merged": true,
+                            "table": "Commerce",
+                            "title": "Gender"
+                        }
+                    }
+                ],
+                "name": "categories"
+            },
+            {
+                "items": [
+                    {
+                        "field": {
+                            "id": "[Commerce.Revenue]_sum",
+                            "index": 1
+                        },
+                        "format": {
+                            "mask": {
+                                "abbreviations": {
+                                    "b": true,
+                                    "k": true,
+                                    "m": true,
+                                    "t": true
+                                },
+                                "decimals": "auto",
+                                "isdefault": true,
+                                "separated": true,
+                                "type": "number"
+                            }
+                        },
+                        "jaql": {
+                            "agg": "sum",
+                            "column": "Revenue",
+                            "datatype": "numeric",
+                            "dim": "[Commerce.Revenue]",
+                            "table": "Commerce",
+                            "title": "Total Revenue"
+                        }
+                    }
+                ],
+                "name": "values"
+            },
+            {
+                "items": [
+                ],
+                "name": "filters"
+            }
+        ]
+    },
+    "oid": "5d371c2f98b98a113c6a5f3b",
+    "options": {
+        "autoUpdateOnEveryChange": true,
+        "dashboardFiltersMode": "select",
+        "drillToAnywhere": true,
+        "selector": true,
+        "selectorLocked": false,
+        "triggersDomready": true
+    },
+    "style": {
+        "convolution": {
+            "enabled": true,
+            "independentSlicesCount": 7,
+            "minimalIndependentSlicePercentage": 3,
+            "selectedConvolutionType": "byPercentage"
+        },
+        "dataLimits": {
+            "seriesCapacity": 100000
+        },
+        "labels": {
+            "categories": true,
+            "decimals": false,
+            "enabled": true,
+            "percent": true,
+            "value": false
+        },
+        "legend": {
+            "enabled": false,
+            "position": "left"
+        },
+        "narration": {
+            "aggregation": "sum",
+            "display": "above",
+            "enabled": false,
+            "format": "bullets",
+            "labels": [
+                {
+                    "id": "gender",
+                    "plural": "Gender",
+                    "singular": "Gender",
+                    "title": "Gender"
+                }
+            ],
+            "up_sentiment": "good",
+            "verbosity": "medium"
+        }
+    },
+    "subtype": "pie/classic",
+    "title": "",
+    "type": "chart/pie"
+}

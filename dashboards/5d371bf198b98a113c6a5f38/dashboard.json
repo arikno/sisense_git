@@ -1,0 +1,67 @@
+{
+    "allowChangeSubscription": false,
+    "dataExploration": false,
+    "datasource": {
+        "address": "LocalHost",
+        "database": "aSampleIAAaECommerce",
+        "fullname": "LocalHost/Sample ECommerce",
+        "id": "aLOCALHOST_aSAMPLEIAAaECOMMERCE",
+        "title": "Sample ECommerce"
+    },
+    "desc": "",
+    "filterRelations": [
+    ],
+    "filters": "./filters.json",
+    "hierarchies": [
+    ],
+    "layout": "./layout.json",
+    "oid": "5d371bf198b98a113c6a5f38",
+    "script": "./script.js",
+    "settings": {
+        "autoUpdateOnFiltersChange": true
+    },
+    "style": {
+        "palette": {
+            "colors": [
+                "#00cee6",
+                "#9b9bd7",
+                "#6EDA55",
+                "#fc7570",
+                "#fbb755",
+                "#218A8C"
+            ],
+            "name": "Vivid"
+        }
+    },
+    "subscription": {
+        "active": false,
+        "context": {
+            "dashboardid": "5d371bf198b98a113c6a5f38"
+        },
+        "custom": false,
+        "emailSettings": {
+            "isEmail": true,
+            "isPdf": false
+        },
+        "executionPerDay": 1,
+        "isDataChange": true,
+        "reportType": {
+            "inline": true
+        },
+        "schedule": "0 00 22 * * *",
+        "startAt": "2023-08-24",
+        "subscribe": false,
+        "timezone": -180,
+        "type": "onUpdate",
+        "tzName": "Asia/Jerusalem"
+    },
+    "title": "Frame SDK Demo",
+    "widgets": [
+        "./widgets/5d371c2f98b98a113c6a5f3b/widget.json",
+        "./widgets/5d431031feb5d72170a608a9/widget.json",
+        "./widgets/5d46cdc103a133202079e65a/widget.json",
+        "./widgets/5d46cde503a133202079e65c/widget.json",
+        "./widgets/65005e1adf4f9e003369d6db/widget.json",
+        "./widgets/65153a67b39bc60033155075/widget.json"
+    ]
+}
